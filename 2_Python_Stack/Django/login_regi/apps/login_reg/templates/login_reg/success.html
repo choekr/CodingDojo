@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Login Successful!</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'login_reg/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+  </head>
+
+  <body>
+    <div id='wrapper'>
+      {% if messages %}
+        {% for message in messages %}
+          <h1><p>{{message}}</p></h1>
+        {% endfor %}
+      {% endif %}
+      <p id='success'>{{ request.session.notification }}</p>
+    </div>
+  </body>
+
+</html>

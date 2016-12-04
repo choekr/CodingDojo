@@ -1,0 +1,51 @@
+h1 {
+  font-size: 55px;
+}
+
+#infoTitle {
+  width: 200px;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#infoInput {
+  width: 40%;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.inputLeft {
+  width: 200px;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.inputRight {
+  width: 200px;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+input {
+  display: block;
+}
+
+form {
+  /*display: inline-block;*/
+  margin: 0 auto;
+}
+
+body {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid black;
+}
+
+p {
+  text-align: left;
+}

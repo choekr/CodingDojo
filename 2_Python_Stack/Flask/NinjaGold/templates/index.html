@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Money</title>
+    <link rel="stylesheet" type="text/css" href=" ">
+    <style type="text/css">
+      #wrapper {
+        width: 75%;
+        margin: 0 auto;
+      }
+      .Buildings {
+        width: 170px;
+        display: inline-block;
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px;
+        margin-right: 60px;
+      }
+      #Activities {
+        height: 100px;
+        max-height: 100px;
+        width: 100%;
+        max-width: 100%;
+        border: 1px solid black;
+        overflow: scroll;
+      }
+
+      .green {
+        color: green;
+      }
+
+      .red {
+        color: red;
+      }
+      h2 {
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id='wrapper'>
+      <div class = 'goldCount'>
+        <h3>Your gold: </h3>
+        {{session['myGold']}}
+        <!-- value of current gold, with border around it -->
+      </div>
+      <div class = 'Buildings Farm'>
+        <form action="/process_money" method="POST">
+          <input type="hidden" name="building" value="Farm"/>
+          <h2>Farm</h2>
+          <p>(earns 10-20 golds)</p>
+          <input type="submit" value="Find Gold!"/>
+        </form> 
+      </div>
+      <div class = 'Buildings Cave'>
+        <form action="/process_money" method="POST">
+          <input type="hidden" name="building" value="Cave"/>
+          <h2>Cave</h2>
+          <p>(earns 5-10 golds)</p>
+          <input type="submit" value="Find Gold!"/>
+        </form> 
+      </div>
+      <div class = 'Buildings House'>
+        <form action="/process_money" method="POST">
+          <input type="hidden" name="building" value="House"/>
+          <h2>House</h2>
+          <p>(earns 2-5 golds)</p>
+          <input type="submit" value="Find Gold!"/>
+        </form> 
+      </div>
+      <div class = 'Buildings Casino'>
+        <form action="/process_money" method="POST">
+          <input type="hidden" name="building" value="Casino"/>
+          <h2>Casino</h2>
+          <p>(earns/takes 0-50 golds)</p>
+          <input type="submit" value="Find Gold!"/>
+        </form> 
+      </div>
+
+      <h3>Activity Logs</h3>
+      <div id = "Activities">
+        {% for activity in session['activityLog'][::-1] %}
+        <p class = "{{activity['color']}}">
+          {{activity['activity']}}
+        </p>
+        {% endfor %}
+      </div>
+      <form action="/reset" method="post">
+        <input type = "submit" value="reset">
+      </form>
+
+    </div>
+  </body>
+
+</html>

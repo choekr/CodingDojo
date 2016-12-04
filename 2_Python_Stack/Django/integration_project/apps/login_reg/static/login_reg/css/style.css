@@ -1,0 +1,30 @@
+#wrapper {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center
+}
+
+h1 {
+  font-weight: lighter;
+  font-family: "Courier New";
+}
+
+#success {
+  color: green;
+}
+
+.registration{
+  margin-right: 25px;
+  width: 120px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+}
+
+input[type=submit] {
+  padding: 5px 15px;
+  background: #ADD8E6;
+  border: 0 none;
+  cursor: pointer;
+  border-radius: 5px;
+}

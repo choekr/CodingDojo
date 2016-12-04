@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Login Successful!</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'login_reg/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+  </head>
+
+  <body>
+    <div id='wrapper'>
+      {% if messages %}
+        {% for message in messages %}
+          <h1><p>{{message}}</p></h1>
+          <p id='success'>{{ request.session.notification }}</p>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <a href="{% url 'courses:index' %}"> go to Courses</a>
+    <a href="{% url 'gold:index' %}"> go to NinjaGold</a>
+    <a href="{% url 'timedisplay:index' %}"> go to TimeDisplay</a>
+    <a href="{% url 'words:index' %}"> go to Random Words</a>
+
+    <form action="{% url 'login_reg:logout' %}">
+      <input type='submit' value='logout'>
+    </form>
+  </body>
+
+</html>

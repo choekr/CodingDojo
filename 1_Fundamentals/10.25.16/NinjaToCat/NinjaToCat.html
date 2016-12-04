@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NinjaToCat</title>
+    <link rel="stylesheet" type="text/css" href=" ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('img').css({
+        'margin-bottom': 5
+      });
+
+      $('.0').click(function() {
+        $(this).find('img').toggle();
+      })    
+      $('.1').click(function() {
+        $(this).find('img').toggle();
+      })    
+      $('.2').click(function() {
+        $(this).find('img').toggle();
+      })    
+      $('.3').click(function() {
+        $(this).find('img').toggle();
+      })    
+      $('.4').click(function() {
+        $(this).find('img').toggle();
+      })    
+    })
+    </script>
+  </head>
+
+  <body>
+    <style>
+      img {
+        display: block;
+      }
+    </style>
+
+    <div>
+      <div class="0">
+        <img src="img/cat0.png" />
+        <img src="img/ninja0.png" style="display: none" />
+      </div>
+
+      <div class="1">
+        <img src="img/cat1.png">
+        <img style="display: none" src="img/ninja1.png">
+      </div>
+
+      <div class="2">
+        <img src="img/cat2.png">
+        <img style="display: none" src="img/ninja2.png">
+      </div>
+
+      <div class="3">
+        <img src="img/cat3.png">
+        <img style="display: none" src="img/ninja3.png">
+      </div>
+
+      <div class="4">
+        <img src="img/cat4.png">
+        <img style="display: none" src="img/ninja4.png">
+      </div>
+    </div>
+
+<!--     <div id="ninjas">
+      <img src="img/ninja0.png">
+      <img src="img/ninja1.png">
+      <img src="img/ninja2.png">
+      <img src="img/ninja3.png">
+      <img src="img/ninja4.png">
+    </div> -->
+  </body>
+
+</html>

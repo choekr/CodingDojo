@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hover in and out</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("body").css({"display": "inline-block", "width": "100%", "text-align": "center"});
+      $("img").css({"width": "23%", "margin": "0 auto"});
+      $("body img").hover(function() {
+        var temp = $(this).attr("src");
+        $(this).attr("src", $(this).attr("data-alt-src"));
+        $(this).attr("data-alt-src", temp);
+      })
+    })
+    </script>
+  </head>
+
+  <body>
+    <img src="img/0.png" data-alt-src="img/-.png">
+    <img src="img/1.png" data-alt-src="img/a.png">
+    <img src="img/2.png" data-alt-src="img/b.png">
+    <img src="img/3.png" data-alt-src="img/c.png">
+    <img src="img/4.png" data-alt-src="img/d.png">
+    <img src="img/5.png" data-alt-src="img/e.png">
+    <img src="img/6.png" data-alt-src="img/f.png">
+    <img src="img/7.png" data-alt-src="img/g.png">
+  </body>
+
+</html>

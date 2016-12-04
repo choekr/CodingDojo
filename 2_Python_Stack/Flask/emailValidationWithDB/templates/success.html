@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>email list</title>
+    <!-- <link rel="stylesheet" type="text/css" href=" "> -->
+  </head>
+
+  <body>
+    {{email}}
+    <h1>The email address you entered({{ new_email }}) is a VALID email address! Thank you!</h1>
+
+    <h3>Email Addresses Entered:</h3>
+
+      {% for email in all_emails: %}
+        <p>
+          {{ email['id'] }}
+          {{ email['email'] }}
+          {{ email['created_at'] }}
+        </p>
+      {% endfor %}
+  </body>
+
+</html>

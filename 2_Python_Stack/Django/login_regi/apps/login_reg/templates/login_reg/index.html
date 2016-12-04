@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'login_reg/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+
+  </head>
+
+  <body>
+    <div id='wrapper'>
+
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      {% endif %}    
+
+      <h1>Registration</h1>
+      <div class='registration'>
+        <p>First Name: </p>
+        <p>Last Name: </p>
+        <p>Email: </p>
+        <p>Password: </p>
+        <p>Confirm pw: </p>
+      </div>
+
+      <div class='registration'>
+        <form action="/register" method="POST">
+          {% csrf_token %}
+          <p><input type='text' name='first_name'></p>
+          <p><input type='text' name='last_name'></p>
+          <p><input type='text' name='email'></p>
+          <p><input type='password' name='password'></p>
+          <p><input type='password' name='confirm_pw'></p>
+          <input type='submit' value='Register'>
+        </form>
+      </div>
+
+
+
+      <h1>Login</h1>
+      <div class='registration'>
+        <p>Email:</p> 
+        <p>Password:</p> 
+      </div>
+      <div class='registration'>
+        <form action="/login" method="POST"> 
+          {% csrf_token %} 
+          <p><input type='text' name='login_email'></p>
+          <p><input type='password' name='login_pw'></p>
+          <input type='submit' value='Login'>
+        </form>
+      </div>
+
+    </div>
+  </body>
+
+</html>

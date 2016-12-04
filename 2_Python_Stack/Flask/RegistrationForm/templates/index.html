@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration form</title>
+    <!-- <link rel="stylesheet" type="text/css" href=" "> -->
+  </head>
+
+  <body>
+    <form action='/process' method='POST'></p>
+      <p>Email:<input type='text' name='email'></p>
+      <p>First Name:<input type='text' name='first_name'></p>
+      <p>Last Name:<input type='text' name='last_name'></p>
+      <p>Birth Date:<input type='date' name='birth_date' value='MM/DD/YYYY'></p>
+      <p>Password:<input type='text' name='password'></p>
+      <p>Confirm Password:<input type='text' name='confirm_password'></p>
+      <input type='submit' value='Submit'>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for blank, message in messages %}
+          <li class="{{blank}}">{{message}}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    </form>
+  </body>
+
+</html>

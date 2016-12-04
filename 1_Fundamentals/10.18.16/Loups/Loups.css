@@ -1,0 +1,76 @@
+div{
+  border-radius: 15px;
+}
+
+#wrapper{
+  width: 935px;
+  background-color: white;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+#header{
+  height: 60px;
+  background-color: silver;
+  margin-bottom: 20px;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 10px;
+}
+
+#main{
+  width: 950px;
+}
+
+#navigation{
+  height: auto;
+  width: 210px;
+  background-color: silver;
+  padding: 10px;
+  /*margin-top: 20px;*/
+  display: inline-block;
+}
+
+#navigation a {
+  text-decoration: none;
+  padding-bottom: none;
+}
+
+#navigation ul {
+  padding-left: 20px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#contents{
+  height: auto;
+  width: 640px;
+  background-color: gray;
+  margin-left: 30px;
+  display: inline-block; 
+  vertical-align: top;
+  padding: 15px;
+}
+
+#title{
+  font-weight: bold;
+  font-size: 30px;
+  margin: 10px 0px;
+}
+
+.required{
+  font-weight: bold;
+}
+
+#contact{
+  height: auto;
+  width: auto;
+  background-color: silver;
+  /*padding-top: 10px;*/
+}
+#contact ul{
+  list-style-type: none;
+  padding-left: 20px;
+  padding: 15px;
+}

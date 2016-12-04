@@ -1,0 +1,7 @@
+touch basic_repo
+git init
+touch index.html index.css
+git add .
+git commit -m "Basic repo"
+
+git push "URL"

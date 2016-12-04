@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit friends list</title>
+    <!-- <link rel="stylesheet" type="text/css" href=" "> -->
+  </head>
+
+  <body>
+    {% for friend in all_friends: %}
+      <p>
+        {{ friend['id'] }}
+        {{ friend['first_name'] }}
+        {{ friend['last_name'] }}
+        {{ friend['created_at'] }}
+      </p>
+    {% endfor %}
+    <form action="/friends/{{friend['id']}}" name='edit' method="POST">
+      <input type='text' name='first_name' value='First Name'>
+      <input type='text' name='last_name' value='Last Name'>
+      <input type='submit' value='edit'>
+    </form>
+  </body>
+
+</html>

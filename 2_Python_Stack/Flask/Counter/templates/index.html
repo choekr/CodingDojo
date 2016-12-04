@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>This is a counter</title>
+    <!-- <link rel="stylesheet" type="text/css" href=""> -->
+    <style type="text/css">
+      form {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action='/' method='post'>
+      <h1>COUNTER</h1>
+      <p>{{session['counter']}}<p>
+    </form>
+    <form action='/addTwo' method='post'>
+      <input type='submit' name='addTwo' value='addTwo'></input>
+    </form>
+    <form action='/reset' method='post'>
+      <input type='submit' name='reset' value='reset'></input>
+    </form>
+  </body>
+
+</html>

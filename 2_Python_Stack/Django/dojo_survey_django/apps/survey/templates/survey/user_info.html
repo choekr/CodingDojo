@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Submitted Info</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'survey/css/my_style.css' %}">
+  </head>
+
+  <body>
+    <h1>Submitted Info</h1>
+    <div id='confirmation'>
+      So far, you have submitted {{request.session.counter}} forms. 
+    </div>
+    <div id="infoTitle">
+      <p>Name:</p>
+      <p>Dojo Location:</p>
+      <p>Favorite Language:</p>
+      <p>Comment:</p>
+    </div>
+
+    <div id="infoInput">
+      <p>{{request.session.name1}}&nbsp</p>
+      <p>{{request.session.location1}}</p>
+      <p>{{request.session.language1}}</p>
+      <p>{{request.session.comment1}}</p>
+    </div>
+
+    <form action='/' method='post'>
+      {% csrf_token %}
+      <input id="button" type='submit' value='Go Back'>
+    </form>
+  </body>
+
+</html>

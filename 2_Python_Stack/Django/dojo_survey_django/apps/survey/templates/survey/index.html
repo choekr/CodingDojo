@@ -1,0 +1,56 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      {% load staticfiles %}
+      <title>Dojo Survey</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'survey/css/my_style.css' %}">
+    </head>
+    <body>
+      <h1>Create a User</h1>
+      <form action='/result' method='post'>
+        {% csrf_token %}
+
+        <div class='inputLeft'>
+          <p>Your Name: <p>
+          <p>Dojo Location: </p>
+          <p>Favorite Language: </p>
+          <p id='comment'>Comment (optional): </p>
+        </div>
+
+        <div class='inputRight'>
+          <!-- <p class='inputRight'> -->
+          <p><input type='text' name='name0'></p>
+          <!-- </p> -->
+          
+          <!-- <p class='inputRight'> -->
+          <p>
+            <select name='location0'>
+              <option value="Seattle">Seattle</option>
+              <option value="Silicon Valley">Silicon Valley</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Dallas">Dallas</option>
+              <option value="Washington DC">Washington DC</option>
+              <option value="Chicago">Chicago</option>
+            </select>
+          </p>
+
+          <!-- <p class='inputRight'> -->
+          <p>
+            <select name='language0'>
+              <option value="JavaScript">JavaScript</option>
+              <option value="Python">Python</option>
+              <option value="MEAN">MEAN</option>
+              <option value="RUBY on Rails">RUBY on Rails</option>
+              <option value="other">other</option>
+            </select>
+          </p>
+          
+          <p>
+           <textarea rows="4" cols="50" name="comment0">Comment here</textarea>
+          </p>
+        </div>
+        
+        <input id= 'button' type='submit' value='Submit'>
+      </form>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Functions</title>
+    <style>
+    .red {
+      color: red;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#clickMe").click(function() {
+        alert("Welcome to my page!");
+      });
+      $("#add").click(function() {
+        $("#addClass p").addClass("red");
+      });
+      $("#val button").click(function() {
+        var text = $(this).text();
+        $("input").val(text);
+      })
+      $("#text button").click(function() {
+        var copy = $("#text p:nth-child(2)").text();
+        $("#text p:last-child").text(copy);
+      })
+      $("#attr img").click(function() {
+        $("#attr img").attr("width", "500px");
+      })
+      $("#html button").click(function() {
+        alert($("#html p").html());
+      })
+    })
+    </script>
+  </head>
+
+  <body>
+    <div id="click">
+      <h1>".click" Function</h1>
+      <p>Click the button to see pop up!</p>
+      <button type="button" id="clickMe">Click</button>
+    </div>
+
+    <div id="addClass">
+      <h1>".addClass" function</h1>
+      <p>Click the button to turn this red!</p>
+      <button type="button" id="add">addClass</button>
+    </div>
+
+    <div id="val">
+      <h1>".val" function</h1>
+      <p>Select your favorite animal</p>
+      <button>Tiger</button>
+      <button>Dog</button>
+      <button>Cat</button>
+      <input type="text" value="Click a button">
+    </div>
+
+    <div id="text">
+      <h1>".text" function</h1>
+      <p>Click the button to copy this paragraph</p>
+      <button>Click to duplicate!</button>
+      <p></p>
+    </div>
+
+    <div id="attr">
+      <h1>".attr" function</h1>
+      <p>Click on the image to change size</p>
+      <img src="http://cdn.skim.gs/image/upload/v1458146496/Mike%20C/994845/nailbiting2_pixabay.jpg">
+    </div>
+
+    <div id="html">
+      <h1>".html" function</h1>
+      <p>Click the button to analyze this <b>paragraph!</b> </p>
+      <button>Click to analyze!</button>
+    </div>
+
+    
+  </body>
+
+</html>

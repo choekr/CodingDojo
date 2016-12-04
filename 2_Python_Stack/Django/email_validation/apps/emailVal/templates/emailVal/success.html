@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>email list</title>
+    <!-- <link rel="stylesheet" type="text/css" href=" "> -->
+  </head>
+
+  <body>
+    <h1>    
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+    </h1>
+
+    <h3>Email Addresses Entered:</h3>
+    <table>
+      <tr>
+        <th>email</th>
+        <th>Email added on</th>
+      </tr>
+
+      {% for email in emails %}
+          <tr>
+            <td>{{ email.email }}</td>
+            <td>{{ email.created_at }}</td>
+            <form action="/remove/{{email.id}}" method="post">
+              {% csrf_token %}
+              <td><a href="remove/{{email.id}}">remove</a></td>
+            </form>
+          </tr>
+      {% endfor %}
+    </table>
+  </body>
+
+</html>

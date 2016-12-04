@@ -1,0 +1,46 @@
+// {
+//   "version": "1.0.0-*",
+//   "buildOptions": {
+//     "debugType": "portable",
+//     "emitEntryPoint": true
+//   },
+//   "dependencies": {},
+//   "frameworks": {
+//     "netcoreapp1.0": {
+//       "dependencies": {
+//         "Microsoft.NETCore.App": {
+//           "type": "platform",
+//           "version": "1.0.0"
+//         }
+//       },
+//       "imports": "dnxcore50"
+//     }
+//   }
+// }
+
+// Nancy getting started
+{
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "copyToOutput": ["Views/Hello/*"] //Bring specified files along when it compiles code
+  },
+  "dependencies": {
+    "Nancy.Session.InMemory": "0.9.1-pre",
+    "Nancy.Session.Persistable": "0.9.1-pre",
+    "FSharp.Core": "4.0.1.7-alpha",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
+    "Microsoft.AspNetCore.Owin": "1.0.0",
+    "Nancy": "2.0.0-barneyrubble",
+    "Microsoft.NETCore.App": {
+        "version": "1.0.0",
+        "type": "platform"
+    },
+    "Microsoft.Extensions.Logging.Console": "1.0.0"
+  },
+  "tools": {
+    "Microsoft.DotNet.Watcher.Tools": "1.0.0-preview2-final"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {}
+  }
+}

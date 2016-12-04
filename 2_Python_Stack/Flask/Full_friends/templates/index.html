@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Full Friends</title>
+    <!-- <link rel="stylesheet" type="text/css" href=" "> -->
+  </head>
+
+  <body>
+    {% for friend in all_friends: %}
+    <form action="/friends/{{ friend['id']}}/edit">
+      <p>
+        {{ friend['id'] }}
+        {{ friend['first_name'] }}
+        {{ friend['last_name'] }}
+        {{ friend['created_at'] }}
+      </p>
+      <input type="submit" name="Edit" value="Edit">
+    </form>
+
+    <form action="/friends/{{ friend['id'] }}/delete" method="post">
+          <input type="submit"  name="Delete" value="Delete">
+    </form>
+    {% endfor %}
+
+    <h3>ADD A FRIEND</h3>
+    <form action='/friends' name='create' method='POST'>
+      <input type='text' name='first_name' value='First Name'>
+      <input type='text' name='last_name' value='Last Name'>
+      <input type='submit' value='Add friend'>
+    </form>
+  </body>
+
+</html>

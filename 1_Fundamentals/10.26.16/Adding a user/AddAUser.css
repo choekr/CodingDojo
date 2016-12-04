@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+  border-bottom: 2px solid black;
+}
+
+body table thead tr {
+  width: 500px;
+  border: 2px solid black;
+}
+
+body table tbody tr {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+/*body table tbody tr:last-child {
+  border-bottom: 2px solid black;
+}*/
+
+th {
+  width: 122px;
+  text-align: left;
+}
+
+th:last-child {
+  text-align: center;
+}
+
+#form {
+  width: 300px;
+  height: auto;
+}
+
+#form p {
+  text-align: right;
+}

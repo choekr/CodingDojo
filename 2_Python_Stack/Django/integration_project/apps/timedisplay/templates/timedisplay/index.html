@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Display Time</title>
+    <!-- <link rel="stylesheet" type="text/css" href=" "> -->
+    <style type="text/css">
+      #title {
+        text-align: center;
+        margin: 0 auto;
+        width: 250px;
+        border: 1px solid black;
+      }
+      #time {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 600px;
+        border: 1px solid black;
+        font-size: 2em;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+      <div id='title'>
+        <h3>The current time and date:</h3>
+      </div>
+
+      <div id='time'>
+        {{CurrentTime}}
+      </div>
+
+      <div >
+        <a href="{% url 'login_reg:main' %}">Home</a>
+      </div>
+  </body>
+
+</html>

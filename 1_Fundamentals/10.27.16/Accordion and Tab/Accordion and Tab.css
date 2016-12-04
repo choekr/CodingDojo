@@ -1,0 +1,18 @@
+#accordion{
+  width: 50%;
+  margin: 0 auto;
+}
+
+#tabs{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.toggler {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.date {
+  text-align: center;
+}

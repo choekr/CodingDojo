@@ -1,0 +1,270 @@
+/*#blue {
+  width
+}*/
+
+#rows {
+  display: inline-block;
+}
+
+.column_element {
+  width: 45px;
+  height: 30px;
+  display: inline-block;
+  background-color: transparent;
+  text-align: center;
+}
+
+.column_element:nth-child(4) {
+  margin-left: 13px
+}
+
+.column_element:nth-child(11) {
+  margin-left: 1px;
+}
+
+.column_element:nth-child(16) {
+  margin-left: -4px;
+}
+/*
+.column_element ul {
+  display: inline;
+}*/
+
+.row_element {
+  width: 45px;
+  height: 48px;
+  background-color: transparent;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+.row_element ul {
+  display: inline-block;
+}
+
+#element_1 {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 0;
+  padding-left: 0;
+}
+
+#element_2 {
+  display: inline-block;
+  vertical-align: bottom;
+  /*padding-top: 48px;*/
+  padding-left: 0;
+  margin-left: -2.5px;
+}
+
+#element_3 {
+  display: inline-block;
+  vertical-align: bottom;
+  /*padding-top: 144px;*/
+  padding-left: 14px;
+}
+
+#element_4 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_5 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_6 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_7 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_8 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_9 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2px;
+}
+
+#element_10 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_11 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_12 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_13 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_14 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_15 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_16 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#element_17 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2px;
+}
+
+#element_18 {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 0px;
+  margin-left: -2.5px;
+}
+
+#green1 {
+  margin-left: 50px;
+  margin-bottom: 1px;
+}
+
+#green1 li{
+  margin-left: -2.45px;
+}
+
+#green1 li:nth-child(2) {
+  margin-left: 35px;
+}
+
+#green2 {
+  margin-left: 50px;
+  margin-top: 0px;
+}
+
+#green2 li {
+  margin-left: -2.45px
+}
+
+#green2 li:nth-child(2) {
+  margin-left: 42.5px;
+}
+
+.blue_element {
+  width: 45px;
+  height: 48px;
+  background-color: #689BFF;
+  border: 1px solid #D4D2D4;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+.blue_element ul{
+  display: inline-block;
+}
+
+.red_element {
+  width: 45px;
+  height: 48px;
+  background-color: #FD9A98;
+  border: 1px solid #D4D2D4;
+  margin-bottom: 1px;
+  text-align: center;
+}
+.red_element ul {
+  display: inline-block;
+}
+
+.yellow_element {
+  width: 45px;
+  height: 48px;
+  background-color: #FECB00;
+  border: 1px solid #D4D2D4;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+.yellow_element ul {
+  display: inline-block;
+}
+
+.green_element {
+  width: 45px;
+  height: 48px;
+  background-color: #1FCA21;
+  border: 1px solid #D4D2D4;
+  display: inline-block;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+.description {
+  vertical-align: top;
+  color: red;
+}
+
+.oids {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  color: #160FAF;
+}
+
+li {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+ul {
+  list-style-type: none
+}

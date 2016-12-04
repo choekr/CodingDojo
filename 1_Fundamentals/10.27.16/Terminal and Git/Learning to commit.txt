@@ -1,0 +1,17 @@
+cd desktop
+touch test
+cd test
+touch commands.txt index.html
+git init
+git add .
+git commit -m --no-edit
+
+git status
+git add index.html
+git commit -m --no-edit
+git log
+
+git revert 1adlbkn
+
+git add .
+git commit -m -n

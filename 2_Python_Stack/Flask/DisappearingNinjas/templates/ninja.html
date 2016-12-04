@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% load staticfiles%}
+    <title>Disappearing Ninjas</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'puff/css/'} "> -->
+  </head>
+
+  <body>
+    {% if ninja == true %}
+      <img src="{{url_for('static', filename='puff/img/tmnt.png')}}">
+    {% endif %}
+
+    {% if ninja == false %}
+      {% if color =='blue' %}
+        <img src="{{url_for('static', filename='puff/img/leonardo.jpg')}}">
+      {% elif color =='orange' %}
+        <img src="{{url_for('static', filename='puff/img/michelangelo.jpg')}}">
+      {% elif color =='red' %}
+        <img src="{{url_for('static', filename='puff/img/raphael.jpg')}}">
+      {% elif color =='purple' %}
+        <img src="{{url_for('static', filename='puff/imgdonatello.jpg')}}">
+      {% else %}
+        <img src="{{url_for('static', filename='puff/img/notapril.jpg')}}">
+      {% endif %}
+    {% endif %}
+  </body>
+
+</html>

@@ -1,0 +1,30 @@
+textarea {
+  width: 250px;
+  height: 150px;
+}
+
+form {
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  margin-left: 10%;
+}
+
+#cards {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  /*border: 1px solid black;*/
+}
+
+.card {
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  margin-left: 20%;
+  margin-top: 10px;
+}
+
+#cards p {
+  display: none;
+}

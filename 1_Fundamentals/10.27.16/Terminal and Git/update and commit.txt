@@ -1,0 +1,8 @@
+git clone "URL"
+
+edit
+
+git add .
+git commit -m --add_my_info
+
+git push

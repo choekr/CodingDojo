@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <title>Hello</title>
+    </head>
+    <body>
+        <h1>Here is Your Pokemon!</h1>
+        <p>Name: @ViewBag.Name</p>
+        <p>Type: @ViewBag.Type</p>
+        <p>Height: @ViewBag.Height</p>
+        <p>Weight: @ViewBag.Weight</p>
+        
+    </body>
+</html>

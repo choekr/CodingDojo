@@ -1,0 +1,21 @@
+#time {
+    border: 1px solid black;
+    width: 450px;
+    text-align: center;
+    display: inline-block;    
+}
+h1{
+    font-weight: bold;
+    margin: 2px;
+}
+
+h3 {
+    border: 1px solid black;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+}
+
+body {
+    text-align: center;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dojodachi!</title>
+    <link rel="stylesheet" type="~/css/site.css"/>
+  </head>
+
+  <body>
+    <h1> Dojodachi! </h1>
+
+    <h5>Fullness: @ViewBag.Friend.Fullness &nbsp
+    Happiness: @ViewBag.Friend.Happiness &nbsp
+    Meals: @ViewBag.Friend.Meals &nbsp
+    Energy: @ViewBag.Friend.Energy</h5>
+
+    <div id = contents>
+    @{
+      if (ViewBag.Friend.Dead == true)
+      {
+        <h3> Oh NO! Dojodachi is dead! </h3>
+        <img src="http://www.clipartkid.com/images/482/happy-face-decals-dead-sad-face-decal-sticker-771Dki-clipart.jpg" alt="">
+        <p>@ViewBag.Comment</p>
+        <form action='reset' method = 'post'>
+          <input type='submit' name='Reset' value= 'Restart?'>
+        </form>
+      }
+      else if (ViewBag.Friend.Win == true)
+      {
+        <h3> Yes! You have completed Dojodachi successfully! </h3>
+        <img src="http://www.healthglu.com/wp-content/uploads/2016/11/happydog.jpg" alt="">
+        <form action='reset' method='post'>
+          <input type='submit' name='Reset' value='Restart?'>
+        </form>
+      }
+      else
+      {
+        <div class = image>
+          <img src = @ViewBag.Image>
+        </div>
+
+        <form action='process' method = 'post'>
+          <input type='submit' name='Action' value = 'Feed'>
+          <input type='submit' name='Action' value='Play'>
+          <input type='submit' name='Action' value='Work'>
+          <input type='submit' name='Action' value='Sleep'>
+        </form>
+        @ViewBag.Comment;
+      }
+    }
+    </div>
+
+  </body>
+
+</html>

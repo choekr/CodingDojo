@@ -1,0 +1,65 @@
+@{
+    ViewData["QuotesList"] = "Results Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <title>QuotingDojo</title>
+         <style type="text/css">
+            logo {
+                text-align: center;
+            }
+            .quotes {
+                margin: auto;
+                width: 40%;
+                text-align: center;
+                border: 1px solid black;
+            }
+
+            #quote {
+                width: 50%;
+                text-align: left;
+                display: inline-block;
+            }
+
+            #id {
+                text-align: center;
+                display: inline-block;
+            }
+
+            #delete {
+                display: inline-block;
+                margin-left: 20px;
+            }
+
+            form {
+                display: inline-block;
+                margin: auto;
+            }
+
+         </style>
+    </head>
+    <body>
+        <logo>
+            <h1>Here are the awesome quotes!</h1>
+        </logo>
+
+        <wrapper>
+            @foreach (var quote in ViewBag.quotes)
+            {
+                <div class="quotes">
+                        <p id="quote">@quote.Quote</p>
+                        <br>
+                        <p id="id">- @quote.Name at @quote.Updated_at</p>
+                        <a id="delete" href="/delete/@quote.Id">Delete</a>
+                            <!--<input type="submit" name="delete" value="Del">-->
+                        <!--</form>-->
+                        <!--<a id="edit" href="/edit/@quote.Id">Edit</a>-->
+                </div>
+            }
+
+        </wrapper>
+
+    </body>
+</html>

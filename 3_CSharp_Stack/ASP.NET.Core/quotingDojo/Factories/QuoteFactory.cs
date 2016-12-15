@@ -11,7 +11,7 @@ namespace quotingDojo.Factory
         private string connectionString;
         public quoteFactory()
         {
-            connectionString = "server=localhost;userid=root;password=root;port=8889;database=quotingdojo;SslMode=None";
+            connectionString = "server=localhost;userid="YourUserID";password="YourPassword";port="YourPort#";database="YourDbName";SslMode=None";
         }
         internal IDbConnection Connection
         {

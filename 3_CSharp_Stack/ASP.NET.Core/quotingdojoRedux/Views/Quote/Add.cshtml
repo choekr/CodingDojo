@@ -1,0 +1,80 @@
+@{
+    ViewData["Title"] = "Quoting Dojo";
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <title>QuotingDojo</title>
+         <style type="text/css">
+            logo {
+                text-align: center;
+            }
+
+            .input {
+                margin: auto;
+                width: 50%;
+            }
+
+            h3 {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 0px;
+                width: 150px;
+            }
+            form {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .button {
+                vertical-align: bottom;
+            }
+
+            #leftButton {
+                margin-top: 15px;
+                margin-left: 80px;
+            }
+
+            #rightButton{
+                float: right;
+                margin: -45px 0px 0px 400px;
+            }
+
+            .red {
+                color: red;
+            }
+         </style>
+    </head>
+    <body>
+        <logo>
+            <h1>Welcome to QuotingDojo, @ViewBag.CurrentUser </h1>
+        </logo>
+
+        <wrapper>
+            @foreach(var error in ViewBag.Errors)
+            {
+                <p class="red"> @error </p>
+            }
+
+            <div class="input">
+                <form action="/quotes" method="post">
+                    <!--<h3>Your name: </h3> <input type="text" name = "Name" placeholder="Your name">-->
+                    <!--<br>-->
+                    <h3>Your quote: </h3> <textarea rows="10" cols="50" name="Quote" placeholder="Your quote here"></textarea>
+                    <br>
+                    <input type="submit" name="add" value="Add my quote!" class="button" id="leftButton">
+                </form>
+                
+                <form class="button" action="/quotes" method="Get">
+                    <input type="submit" name="skip" value="Skip to quotes!" id="rightButton">
+                </form>
+                
+                <form calss="button" action="/logout" method="get">
+                    <input type="submit" name="logout" value="Log out">
+                </form>
+            </div>
+        </wrapper>
+
+    </body>
+</html>

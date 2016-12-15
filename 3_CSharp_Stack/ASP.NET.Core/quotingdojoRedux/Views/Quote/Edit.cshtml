@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Edit";
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <title>QuotingDojo</title>
+         <style type="text/css">
+            logo {
+                text-align: center;
+            }
+
+            .input {
+                margin: auto;
+                width: 50%;
+            }
+
+            h3 {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 0px;
+                width: 150px;
+            }
+            form {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .button {
+                vertical-align: bottom;
+            }
+
+            #leftButton {
+                margin-top: 15px;
+                margin-left: 80px;
+            }
+
+            #rightButton{
+                float: right;
+                margin: -45px 0px 0px 400px;
+            }
+
+         </style>
+    </head>
+
+    <body>
+        <logo>
+            <h1>Edit your quote, @ViewBag.CurrentUser </h1>
+        </logo>
+
+        <wrapper>
+            <div class="input">
+                <h3>Your quote: </h3> 
+                    @foreach (var quote in ViewBag.Quote)
+                    {
+                        <p>@quote.Quote</p>
+                    }
+
+                    @foreach (var error in ViewBag.Errors)
+                    {
+                        <p>@error</p>
+                    }
+                <form action="/edit/@ViewBag.EditingId" method="post">
+                    <h3>Enter new quote: </h3>
+
+                    <textarea rows="10" cols="50" name="Quote" placeholder="Your quote here"></textarea>
+                    <br>
+                    <input type="submit" name="edit" value="Edit my quote!" class="button">
+                </form>
+
+                <a href="/quotes"> Back </a>
+            </div>
+        </wrapper>
+
+    </body>
+</html>

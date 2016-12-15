@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <title>Login and Registration</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<h1>Registration</h1>
+<!--<p>Get to adding stuff</p>-->
+<div>
+    @{
+        foreach(var error in ViewBag.RegErrors)
+            {
+                <p class="red"> @error </p>
+            }
+    }
+</div>
+
+<form action="Register" method="post">
+    <p> First Name: <input type="text" name="FirstName" placeholder="First name"> </p>
+    <p> Last Name: <input type="text" name="LastName" placeholder="Last name"> </p>
+    <p> Email Address: <input type="text" name="Email" placeholder="E-mail"> </p>
+    <p> Password: <input type="password" name="Password" placeholder="Password"> </p>
+    <p> Confirm Password: <input type="password" name="Confirm_pw" placeholder="Confirm Password"> </p>
+    <input type="submit" value="Register">
+</form>
+
+<div>
+    @{
+        foreach(var error in ViewBag.LoginErrors)
+        {
+            <p class="red"> @error </p>
+        }
+    }
+</div>
+
+<h1>Login</h1>
+<form action="login" method="post">
+    <p> Email: <input type="text" name="Email" placeholder="E-mail"> </p>
+    <p> Password: <input type="password" name="Password" placeholder="Password"> </p>
+    <input type="submit" value="Login">
+</form>

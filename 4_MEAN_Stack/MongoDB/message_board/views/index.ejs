@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Message Board</title>
+    <link rel="stylesheet" type="text/css" href=" ">
+  </head>
+
+  <body>
+    <h1>The Dojo Message Board</h1>
+
+    <form action='/new_message' method='post'>
+      <div>Name:</div>
+      <input name='name' type='text' placeholder='Name'></input>
+      <div>Message:</div>
+      <textarea name = 'message' rows='4' cols='50' placeholder='Message goes here'></textarea> 
+      <input type='submit' value='Add my message'>
+    </form>
+
+    <% if(typeof(errors) != 'undefined'){%>
+      <% for (var x in errors) { %>
+        <h3><%= errors[x]%></h3>
+      <% } %>
+
+    <% } %>
+
+    <% data.forEach(function(message){ %>
+      <p> Message By <%= message.name %>: </p>
+      <p> <%= message.message %> </p>
+
+      <% c_data.forEach(function(comments){%>
+        <p>Comment By <%= comments.name %>: </p>
+        <p><%= comments.comment %></p>
+      <% });%>
+      <form action='/new_comment/<%= message._id %>' method='post'>
+        <div>Name:</div>
+        <input name='name' type='text' placeholder='Name'></input>
+        <div>Comment:</div>
+        <textarea name='comment' rows='4' cols=auto placeholder='Comment goes here'></textarea>
+        <input type='submit' value='Add my comment'>
+      </form>
+
+    <% }) %>
+
+  </body>
+
+</html>

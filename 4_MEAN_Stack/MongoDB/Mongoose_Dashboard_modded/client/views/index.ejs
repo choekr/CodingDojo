@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href=" ">
+  </head>
+
+  <body>
+    <h1>Here are your animals: </h1>
+
+    <% data.forEach(function(animals){ %>
+      <p>Name: <%= animals.name %> Type: <%=animals.type %> ID: <%=animals.id%> 
+
+        <form action="/destroy/<%= animals.name %>" method='post'>
+        <input type="submit" value="Delete">
+        </form>
+
+      </p>
+    <% }) %>
+  </body>
+
+</html>

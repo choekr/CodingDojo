@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <title>QuotingDojo</title>
+         <style type="text/css">
+            logo {
+                text-align: center;
+            }
+            .quotes {
+                margin: auto;
+                width: 40%;
+                text-align: center;
+                border: 1px solid black;
+            }
+
+            #quote {
+                width: 50%;
+                text-align: left;
+                display: inline-block;
+            }
+
+            #id {
+                text-align: center;
+                display: inline-block;
+            }
+
+            #delete {
+                display: inline-block;
+                margin-left: 20px;
+            }
+
+            form {
+                display: inline-block;
+                margin: auto;
+            }
+
+         </style>
+    </head>
+    <body>
+        <logo>
+            <h1>Here are the awesome quotes!</h1>
+        </logo>
+
+        <wrapper>
+
+            <% data.forEach(function(quote){ %>
+                <div class="quotes">
+                        <p id="quote"> <%=quote.Quote%> </p>
+                        <br>
+                        <p id="id"> By <%=quote.Name%> on <%= quote.updatedAt %> </p>
+                        <!-- <a id="delete" href="/delete/@quote.id">Delete</a> -->
+                        <!-- <a id="edit" href="/edit/@quote.id">Edit</a> -->
+                </div>
+            <% }) %>
+            <a id="back" href="/">Go Back</a>
+        </wrapper>
+
+    </body>
+</html>

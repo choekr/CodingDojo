@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit</title>
+</head>
+<body>
+
+  <% data.forEach(function(animals){ %>
+    <h1>Edit <%= animals.name %></h1>
+    <form action="/edit/<%= animals.name %>" method='post'>
+      Name: <input type="text" name="name" placeholder="<%= animals.name %>">
+      Type: <input type="text" name="type" placeholder="<%= animals.type %>">
+      <input type="submit" value="Edit animal!">
+    </form>
+    <a href="/">Home</a>
+
+  <%  }) %>
+</body>
+</html>

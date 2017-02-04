@@ -1,0 +1,14 @@
+<div ng-controller='userController'>
+  <p ng-repeat='e in err' style='color:red'>{{e}}</p>
+  <form>
+    <select ng-model='user.newFriend'>
+      <option></option>
+      <option ng-repeat='u in users' value='{{u._id}}'>{{u.name}}</option>
+    </select>
+    <input type='submit' value='Add friend' ng-click='addFriend()'>
+  </form>
+
+  <p ng-repeat='f in friends'>
+    <a href="" ng-click='showFriend(f._id)')>{{f.name}}</a>
+  </p>
+</div>

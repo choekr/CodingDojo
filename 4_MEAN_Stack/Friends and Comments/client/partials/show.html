@@ -1,0 +1,24 @@
+<div ng-controller='userController'>
+  Here are {{cur_user.name}}'s friends:
+  <div ng-repeat='f in cur_user._friends'>
+    <p>{{f.name}}</p>
+  </div>
+
+  COMMENTS:
+  <div ng-controller='commentController'>
+    <div ng-repeat='e in err' style='color:red'>{{e}}</div>
+    <form>
+      <textarea placeholder='enter your comments about {{cur_user.name}} here' style="width: 45%; height: 50px" ng-model='comment.newComment'></textarea>
+    </form>
+
+    <button ng-click='addComment(cur_user._id)'>Submit</button>
+  </div>
+
+
+  <div ng-repeat='c in cur_user._comments_rec'>
+    {{c._creator[0].name}} says...
+    {{c.comment}}
+    <!-- <p>{{c.name}} Says...</p> -->
+    <!-- <p>{{c.}}</p> -->
+  </div>
+</div>
